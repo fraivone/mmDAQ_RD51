@@ -1,0 +1,2 @@
+/home/dateuser/MMDAQ3_Configuration/Pad_MM/data/run166.root
+/home/dateuser/MMDAQ3_Configuration/Pad_MM/DAQ_config.xml

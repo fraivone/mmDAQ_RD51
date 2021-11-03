@@ -1,0 +1,2293 @@
+// Do NOT change. Changes will be lost next time file is generated
+
+#define R__DICTIONARY_FILENAME Dict
+#define R__NO_DEPRECATION
+
+/*******************************************************************/
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+#define G__DICTIONARY
+#include "RConfig.h"
+#include "TClass.h"
+#include "TDictAttributeMap.h"
+#include "TInterpreter.h"
+#include "TROOT.h"
+#include "TBuffer.h"
+#include "TMemberInspector.h"
+#include "TInterpreter.h"
+#include "TVirtualMutex.h"
+#include "TError.h"
+
+#ifndef G__ROOT
+#define G__ROOT
+#endif
+
+#include "RtypesImp.h"
+#include "TIsAProxy.h"
+#include "TFileMergeInfo.h"
+#include <algorithm>
+#include "TCollectionProxyInfo.h"
+/*******************************************************************/
+
+#include "TDataMember.h"
+
+// The generated code does not explicitly qualifies STL entities
+namespace std {} using namespace std;
+
+// Header files passed as explicit arguments
+#include "GuiBase.h"
+#include "GuiMainFrame.h"
+#include "GuiMainFrameOnline.h"
+#include "GuiMainFrameOffline.h"
+#include "GuiTab.h"
+#include "GuiTabDetector.h"
+#include "GuiTabMainOptions.h"
+#include "GuiTabPlane.h"
+#include "GuiTabReadout.h"
+#include "GuiTabDetectorCrosstalk.h"
+#include "ParserApvRawTree.h"
+#include "GuiTabChamber.h"
+#include "GuiTabXmlCreator.h"
+#include "GuiTabFec.h"
+#include "GuiSaveFec.h"
+#include "GuiTabDetXml.h"
+#include "GuiSaveDet.h"
+#include "GuiTabSaveXml.h"
+#include "GuiAddApv.h"
+#include "GuiConfig.h"
+
+// Header files passed via #pragma extra_include
+
+namespace browser {
+   namespace ROOT {
+      inline ::ROOT::TGenericClassInfo *GenerateInitInstance();
+      static TClass *browser_Dictionary();
+
+      // Function generating the singleton type initializer
+      inline ::ROOT::TGenericClassInfo *GenerateInitInstance()
+      {
+         static ::ROOT::TGenericClassInfo 
+            instance("browser", 0 /*version*/, "GuiBase.h", 12,
+                     ::ROOT::Internal::DefineBehavior((void*)0,(void*)0),
+                     &browser_Dictionary, 0);
+         return &instance;
+      }
+      // Insure that the inline function is _not_ optimized away by the compiler
+      ::ROOT::TGenericClassInfo *(*_R__UNIQUE_DICT_(InitFunctionKeeper))() = &GenerateInitInstance;  
+      // Static variable to force the class initialization
+      static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstance(); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+      // Dictionary for non-ClassDef classes
+      static TClass *browser_Dictionary() {
+         return GenerateInitInstance()->GetClass();
+      }
+
+   }
+}
+
+namespace ROOT {
+   static TClass *browsercLcLCGuiBase_Dictionary();
+   static void browsercLcLCGuiBase_TClassManip(TClass*);
+   static void *new_browsercLcLCGuiBase(void *p = 0);
+   static void *newArray_browsercLcLCGuiBase(Long_t size, void *p);
+   static void delete_browsercLcLCGuiBase(void *p);
+   static void deleteArray_browsercLcLCGuiBase(void *p);
+   static void destruct_browsercLcLCGuiBase(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiBase*)
+   {
+      ::browser::CGuiBase *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::browser::CGuiBase));
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiBase", "GuiBase.h", 25,
+                  typeid(::browser::CGuiBase), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &browsercLcLCGuiBase_Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiBase) );
+      instance.SetNew(&new_browsercLcLCGuiBase);
+      instance.SetNewArray(&newArray_browsercLcLCGuiBase);
+      instance.SetDelete(&delete_browsercLcLCGuiBase);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiBase);
+      instance.SetDestructor(&destruct_browsercLcLCGuiBase);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiBase*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiBase*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiBase*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *browsercLcLCGuiBase_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiBase*)0x0)->GetClass();
+      browsercLcLCGuiBase_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void browsercLcLCGuiBase_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *browsercLcLCGuiMainFrame_Dictionary();
+   static void browsercLcLCGuiMainFrame_TClassManip(TClass*);
+   static void delete_browsercLcLCGuiMainFrame(void *p);
+   static void deleteArray_browsercLcLCGuiMainFrame(void *p);
+   static void destruct_browsercLcLCGuiMainFrame(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiMainFrame*)
+   {
+      ::browser::CGuiMainFrame *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::browser::CGuiMainFrame));
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiMainFrame", "GuiMainFrame.h", 42,
+                  typeid(::browser::CGuiMainFrame), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &browsercLcLCGuiMainFrame_Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiMainFrame) );
+      instance.SetDelete(&delete_browsercLcLCGuiMainFrame);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiMainFrame);
+      instance.SetDestructor(&destruct_browsercLcLCGuiMainFrame);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiMainFrame*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiMainFrame*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiMainFrame*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *browsercLcLCGuiMainFrame_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiMainFrame*)0x0)->GetClass();
+      browsercLcLCGuiMainFrame_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void browsercLcLCGuiMainFrame_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static void *new_browsercLcLCGuiMainFrameOnline(void *p = 0);
+   static void *newArray_browsercLcLCGuiMainFrameOnline(Long_t size, void *p);
+   static void delete_browsercLcLCGuiMainFrameOnline(void *p);
+   static void deleteArray_browsercLcLCGuiMainFrameOnline(void *p);
+   static void destruct_browsercLcLCGuiMainFrameOnline(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiMainFrameOnline*)
+   {
+      ::browser::CGuiMainFrameOnline *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::browser::CGuiMainFrameOnline >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiMainFrameOnline", ::browser::CGuiMainFrameOnline::Class_Version(), "GuiMainFrameOnline.h", 43,
+                  typeid(::browser::CGuiMainFrameOnline), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &::browser::CGuiMainFrameOnline::Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiMainFrameOnline) );
+      instance.SetNew(&new_browsercLcLCGuiMainFrameOnline);
+      instance.SetNewArray(&newArray_browsercLcLCGuiMainFrameOnline);
+      instance.SetDelete(&delete_browsercLcLCGuiMainFrameOnline);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiMainFrameOnline);
+      instance.SetDestructor(&destruct_browsercLcLCGuiMainFrameOnline);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiMainFrameOnline*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiMainFrameOnline*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiMainFrameOnline*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
+   static void *new_browsercLcLCGuiMainFrameOffline(void *p = 0);
+   static void *newArray_browsercLcLCGuiMainFrameOffline(Long_t size, void *p);
+   static void delete_browsercLcLCGuiMainFrameOffline(void *p);
+   static void deleteArray_browsercLcLCGuiMainFrameOffline(void *p);
+   static void destruct_browsercLcLCGuiMainFrameOffline(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiMainFrameOffline*)
+   {
+      ::browser::CGuiMainFrameOffline *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::browser::CGuiMainFrameOffline >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiMainFrameOffline", ::browser::CGuiMainFrameOffline::Class_Version(), "GuiMainFrameOffline.h", 36,
+                  typeid(::browser::CGuiMainFrameOffline), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &::browser::CGuiMainFrameOffline::Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiMainFrameOffline) );
+      instance.SetNew(&new_browsercLcLCGuiMainFrameOffline);
+      instance.SetNewArray(&newArray_browsercLcLCGuiMainFrameOffline);
+      instance.SetDelete(&delete_browsercLcLCGuiMainFrameOffline);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiMainFrameOffline);
+      instance.SetDestructor(&destruct_browsercLcLCGuiMainFrameOffline);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiMainFrameOffline*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiMainFrameOffline*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiMainFrameOffline*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *browsercLcLCGuiTab_Dictionary();
+   static void browsercLcLCGuiTab_TClassManip(TClass*);
+   static void delete_browsercLcLCGuiTab(void *p);
+   static void deleteArray_browsercLcLCGuiTab(void *p);
+   static void destruct_browsercLcLCGuiTab(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiTab*)
+   {
+      ::browser::CGuiTab *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::browser::CGuiTab));
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiTab", "GuiTab.h", 30,
+                  typeid(::browser::CGuiTab), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &browsercLcLCGuiTab_Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiTab) );
+      instance.SetDelete(&delete_browsercLcLCGuiTab);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiTab);
+      instance.SetDestructor(&destruct_browsercLcLCGuiTab);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiTab*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiTab*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiTab*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *browsercLcLCGuiTab_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiTab*)0x0)->GetClass();
+      browsercLcLCGuiTab_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void browsercLcLCGuiTab_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *browsercLcLCGuiTabDetector_Dictionary();
+   static void browsercLcLCGuiTabDetector_TClassManip(TClass*);
+   static void *new_browsercLcLCGuiTabDetector(void *p = 0);
+   static void *newArray_browsercLcLCGuiTabDetector(Long_t size, void *p);
+   static void delete_browsercLcLCGuiTabDetector(void *p);
+   static void deleteArray_browsercLcLCGuiTabDetector(void *p);
+   static void destruct_browsercLcLCGuiTabDetector(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiTabDetector*)
+   {
+      ::browser::CGuiTabDetector *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::browser::CGuiTabDetector));
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiTabDetector", "GuiTabDetector.h", 18,
+                  typeid(::browser::CGuiTabDetector), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &browsercLcLCGuiTabDetector_Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiTabDetector) );
+      instance.SetNew(&new_browsercLcLCGuiTabDetector);
+      instance.SetNewArray(&newArray_browsercLcLCGuiTabDetector);
+      instance.SetDelete(&delete_browsercLcLCGuiTabDetector);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiTabDetector);
+      instance.SetDestructor(&destruct_browsercLcLCGuiTabDetector);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiTabDetector*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiTabDetector*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiTabDetector*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *browsercLcLCGuiTabDetector_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiTabDetector*)0x0)->GetClass();
+      browsercLcLCGuiTabDetector_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void browsercLcLCGuiTabDetector_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *browsercLcLCGuiTabMainOptions_Dictionary();
+   static void browsercLcLCGuiTabMainOptions_TClassManip(TClass*);
+   static void *new_browsercLcLCGuiTabMainOptions(void *p = 0);
+   static void *newArray_browsercLcLCGuiTabMainOptions(Long_t size, void *p);
+   static void delete_browsercLcLCGuiTabMainOptions(void *p);
+   static void deleteArray_browsercLcLCGuiTabMainOptions(void *p);
+   static void destruct_browsercLcLCGuiTabMainOptions(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiTabMainOptions*)
+   {
+      ::browser::CGuiTabMainOptions *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::browser::CGuiTabMainOptions));
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiTabMainOptions", "GuiTabMainOptions.h", 28,
+                  typeid(::browser::CGuiTabMainOptions), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &browsercLcLCGuiTabMainOptions_Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiTabMainOptions) );
+      instance.SetNew(&new_browsercLcLCGuiTabMainOptions);
+      instance.SetNewArray(&newArray_browsercLcLCGuiTabMainOptions);
+      instance.SetDelete(&delete_browsercLcLCGuiTabMainOptions);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiTabMainOptions);
+      instance.SetDestructor(&destruct_browsercLcLCGuiTabMainOptions);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiTabMainOptions*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiTabMainOptions*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiTabMainOptions*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *browsercLcLCGuiTabMainOptions_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiTabMainOptions*)0x0)->GetClass();
+      browsercLcLCGuiTabMainOptions_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void browsercLcLCGuiTabMainOptions_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *browsercLcLCGuiTabPlane_Dictionary();
+   static void browsercLcLCGuiTabPlane_TClassManip(TClass*);
+   static void *new_browsercLcLCGuiTabPlane(void *p = 0);
+   static void *newArray_browsercLcLCGuiTabPlane(Long_t size, void *p);
+   static void delete_browsercLcLCGuiTabPlane(void *p);
+   static void deleteArray_browsercLcLCGuiTabPlane(void *p);
+   static void destruct_browsercLcLCGuiTabPlane(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiTabPlane*)
+   {
+      ::browser::CGuiTabPlane *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::browser::CGuiTabPlane));
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiTabPlane", "GuiTabPlane.h", 18,
+                  typeid(::browser::CGuiTabPlane), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &browsercLcLCGuiTabPlane_Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiTabPlane) );
+      instance.SetNew(&new_browsercLcLCGuiTabPlane);
+      instance.SetNewArray(&newArray_browsercLcLCGuiTabPlane);
+      instance.SetDelete(&delete_browsercLcLCGuiTabPlane);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiTabPlane);
+      instance.SetDestructor(&destruct_browsercLcLCGuiTabPlane);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiTabPlane*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiTabPlane*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiTabPlane*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *browsercLcLCGuiTabPlane_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiTabPlane*)0x0)->GetClass();
+      browsercLcLCGuiTabPlane_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void browsercLcLCGuiTabPlane_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *browsercLcLCGuiTabReadout_Dictionary();
+   static void browsercLcLCGuiTabReadout_TClassManip(TClass*);
+   static void *new_browsercLcLCGuiTabReadout(void *p = 0);
+   static void *newArray_browsercLcLCGuiTabReadout(Long_t size, void *p);
+   static void delete_browsercLcLCGuiTabReadout(void *p);
+   static void deleteArray_browsercLcLCGuiTabReadout(void *p);
+   static void destruct_browsercLcLCGuiTabReadout(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiTabReadout*)
+   {
+      ::browser::CGuiTabReadout *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::browser::CGuiTabReadout));
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiTabReadout", "GuiTabReadout.h", 24,
+                  typeid(::browser::CGuiTabReadout), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &browsercLcLCGuiTabReadout_Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiTabReadout) );
+      instance.SetNew(&new_browsercLcLCGuiTabReadout);
+      instance.SetNewArray(&newArray_browsercLcLCGuiTabReadout);
+      instance.SetDelete(&delete_browsercLcLCGuiTabReadout);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiTabReadout);
+      instance.SetDestructor(&destruct_browsercLcLCGuiTabReadout);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiTabReadout*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiTabReadout*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiTabReadout*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *browsercLcLCGuiTabReadout_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiTabReadout*)0x0)->GetClass();
+      browsercLcLCGuiTabReadout_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void browsercLcLCGuiTabReadout_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *browsercLcLCGuiTabDetectorCrosstalk_Dictionary();
+   static void browsercLcLCGuiTabDetectorCrosstalk_TClassManip(TClass*);
+   static void delete_browsercLcLCGuiTabDetectorCrosstalk(void *p);
+   static void deleteArray_browsercLcLCGuiTabDetectorCrosstalk(void *p);
+   static void destruct_browsercLcLCGuiTabDetectorCrosstalk(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiTabDetectorCrosstalk*)
+   {
+      ::browser::CGuiTabDetectorCrosstalk *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::browser::CGuiTabDetectorCrosstalk));
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiTabDetectorCrosstalk", "GuiTabDetectorCrosstalk.h", 29,
+                  typeid(::browser::CGuiTabDetectorCrosstalk), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &browsercLcLCGuiTabDetectorCrosstalk_Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiTabDetectorCrosstalk) );
+      instance.SetDelete(&delete_browsercLcLCGuiTabDetectorCrosstalk);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiTabDetectorCrosstalk);
+      instance.SetDestructor(&destruct_browsercLcLCGuiTabDetectorCrosstalk);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiTabDetectorCrosstalk*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiTabDetectorCrosstalk*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiTabDetectorCrosstalk*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *browsercLcLCGuiTabDetectorCrosstalk_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiTabDetectorCrosstalk*)0x0)->GetClass();
+      browsercLcLCGuiTabDetectorCrosstalk_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void browsercLcLCGuiTabDetectorCrosstalk_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *browsercLcLCGuiTabChamber_Dictionary();
+   static void browsercLcLCGuiTabChamber_TClassManip(TClass*);
+   static void *new_browsercLcLCGuiTabChamber(void *p = 0);
+   static void *newArray_browsercLcLCGuiTabChamber(Long_t size, void *p);
+   static void delete_browsercLcLCGuiTabChamber(void *p);
+   static void deleteArray_browsercLcLCGuiTabChamber(void *p);
+   static void destruct_browsercLcLCGuiTabChamber(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiTabChamber*)
+   {
+      ::browser::CGuiTabChamber *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::browser::CGuiTabChamber));
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiTabChamber", "GuiTabChamber.h", 18,
+                  typeid(::browser::CGuiTabChamber), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &browsercLcLCGuiTabChamber_Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiTabChamber) );
+      instance.SetNew(&new_browsercLcLCGuiTabChamber);
+      instance.SetNewArray(&newArray_browsercLcLCGuiTabChamber);
+      instance.SetDelete(&delete_browsercLcLCGuiTabChamber);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiTabChamber);
+      instance.SetDestructor(&destruct_browsercLcLCGuiTabChamber);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiTabChamber*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiTabChamber*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiTabChamber*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *browsercLcLCGuiTabChamber_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiTabChamber*)0x0)->GetClass();
+      browsercLcLCGuiTabChamber_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void browsercLcLCGuiTabChamber_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *browsercLcLCGuiTabXml_Dictionary();
+   static void browsercLcLCGuiTabXml_TClassManip(TClass*);
+   static void *new_browsercLcLCGuiTabXml(void *p = 0);
+   static void *newArray_browsercLcLCGuiTabXml(Long_t size, void *p);
+   static void delete_browsercLcLCGuiTabXml(void *p);
+   static void deleteArray_browsercLcLCGuiTabXml(void *p);
+   static void destruct_browsercLcLCGuiTabXml(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiTabXml*)
+   {
+      ::browser::CGuiTabXml *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::browser::CGuiTabXml));
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiTabXml", "GuiTabXmlCreator.h", 30,
+                  typeid(::browser::CGuiTabXml), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &browsercLcLCGuiTabXml_Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiTabXml) );
+      instance.SetNew(&new_browsercLcLCGuiTabXml);
+      instance.SetNewArray(&newArray_browsercLcLCGuiTabXml);
+      instance.SetDelete(&delete_browsercLcLCGuiTabXml);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiTabXml);
+      instance.SetDestructor(&destruct_browsercLcLCGuiTabXml);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiTabXml*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiTabXml*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiTabXml*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *browsercLcLCGuiTabXml_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiTabXml*)0x0)->GetClass();
+      browsercLcLCGuiTabXml_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void browsercLcLCGuiTabXml_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *browsercLcLCGuiTabFec_Dictionary();
+   static void browsercLcLCGuiTabFec_TClassManip(TClass*);
+   static void delete_browsercLcLCGuiTabFec(void *p);
+   static void deleteArray_browsercLcLCGuiTabFec(void *p);
+   static void destruct_browsercLcLCGuiTabFec(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiTabFec*)
+   {
+      ::browser::CGuiTabFec *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::browser::CGuiTabFec));
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiTabFec", "GuiTabFec.h", 25,
+                  typeid(::browser::CGuiTabFec), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &browsercLcLCGuiTabFec_Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiTabFec) );
+      instance.SetDelete(&delete_browsercLcLCGuiTabFec);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiTabFec);
+      instance.SetDestructor(&destruct_browsercLcLCGuiTabFec);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiTabFec*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiTabFec*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiTabFec*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *browsercLcLCGuiTabFec_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiTabFec*)0x0)->GetClass();
+      browsercLcLCGuiTabFec_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void browsercLcLCGuiTabFec_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *CGuiSaveFec_Dictionary();
+   static void CGuiSaveFec_TClassManip(TClass*);
+   static void delete_CGuiSaveFec(void *p);
+   static void deleteArray_CGuiSaveFec(void *p);
+   static void destruct_CGuiSaveFec(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::CGuiSaveFec*)
+   {
+      ::CGuiSaveFec *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::CGuiSaveFec));
+      static ::ROOT::TGenericClassInfo 
+         instance("CGuiSaveFec", "GuiSaveFec.h", 11,
+                  typeid(::CGuiSaveFec), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &CGuiSaveFec_Dictionary, isa_proxy, 4,
+                  sizeof(::CGuiSaveFec) );
+      instance.SetDelete(&delete_CGuiSaveFec);
+      instance.SetDeleteArray(&deleteArray_CGuiSaveFec);
+      instance.SetDestructor(&destruct_CGuiSaveFec);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::CGuiSaveFec*)
+   {
+      return GenerateInitInstanceLocal((::CGuiSaveFec*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::CGuiSaveFec*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *CGuiSaveFec_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::CGuiSaveFec*)0x0)->GetClass();
+      CGuiSaveFec_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void CGuiSaveFec_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *browsercLcLCGuiTabDetXml_Dictionary();
+   static void browsercLcLCGuiTabDetXml_TClassManip(TClass*);
+   static void delete_browsercLcLCGuiTabDetXml(void *p);
+   static void deleteArray_browsercLcLCGuiTabDetXml(void *p);
+   static void destruct_browsercLcLCGuiTabDetXml(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiTabDetXml*)
+   {
+      ::browser::CGuiTabDetXml *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::browser::CGuiTabDetXml));
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiTabDetXml", "GuiTabDetXml.h", 25,
+                  typeid(::browser::CGuiTabDetXml), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &browsercLcLCGuiTabDetXml_Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiTabDetXml) );
+      instance.SetDelete(&delete_browsercLcLCGuiTabDetXml);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiTabDetXml);
+      instance.SetDestructor(&destruct_browsercLcLCGuiTabDetXml);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiTabDetXml*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiTabDetXml*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiTabDetXml*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *browsercLcLCGuiTabDetXml_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiTabDetXml*)0x0)->GetClass();
+      browsercLcLCGuiTabDetXml_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void browsercLcLCGuiTabDetXml_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *CGuiSaveDet_Dictionary();
+   static void CGuiSaveDet_TClassManip(TClass*);
+   static void delete_CGuiSaveDet(void *p);
+   static void deleteArray_CGuiSaveDet(void *p);
+   static void destruct_CGuiSaveDet(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::CGuiSaveDet*)
+   {
+      ::CGuiSaveDet *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::CGuiSaveDet));
+      static ::ROOT::TGenericClassInfo 
+         instance("CGuiSaveDet", "GuiSaveDet.h", 13,
+                  typeid(::CGuiSaveDet), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &CGuiSaveDet_Dictionary, isa_proxy, 4,
+                  sizeof(::CGuiSaveDet) );
+      instance.SetDelete(&delete_CGuiSaveDet);
+      instance.SetDeleteArray(&deleteArray_CGuiSaveDet);
+      instance.SetDestructor(&destruct_CGuiSaveDet);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::CGuiSaveDet*)
+   {
+      return GenerateInitInstanceLocal((::CGuiSaveDet*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::CGuiSaveDet*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *CGuiSaveDet_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::CGuiSaveDet*)0x0)->GetClass();
+      CGuiSaveDet_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void CGuiSaveDet_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *browsercLcLCGuiTabSaveXml_Dictionary();
+   static void browsercLcLCGuiTabSaveXml_TClassManip(TClass*);
+   static void delete_browsercLcLCGuiTabSaveXml(void *p);
+   static void deleteArray_browsercLcLCGuiTabSaveXml(void *p);
+   static void destruct_browsercLcLCGuiTabSaveXml(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::browser::CGuiTabSaveXml*)
+   {
+      ::browser::CGuiTabSaveXml *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::browser::CGuiTabSaveXml));
+      static ::ROOT::TGenericClassInfo 
+         instance("browser::CGuiTabSaveXml", "GuiTabSaveXml.h", 26,
+                  typeid(::browser::CGuiTabSaveXml), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &browsercLcLCGuiTabSaveXml_Dictionary, isa_proxy, 4,
+                  sizeof(::browser::CGuiTabSaveXml) );
+      instance.SetDelete(&delete_browsercLcLCGuiTabSaveXml);
+      instance.SetDeleteArray(&deleteArray_browsercLcLCGuiTabSaveXml);
+      instance.SetDestructor(&destruct_browsercLcLCGuiTabSaveXml);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::browser::CGuiTabSaveXml*)
+   {
+      return GenerateInitInstanceLocal((::browser::CGuiTabSaveXml*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::browser::CGuiTabSaveXml*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *browsercLcLCGuiTabSaveXml_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiTabSaveXml*)0x0)->GetClass();
+      browsercLcLCGuiTabSaveXml_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void browsercLcLCGuiTabSaveXml_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *CGuiAddApv_Dictionary();
+   static void CGuiAddApv_TClassManip(TClass*);
+   static void delete_CGuiAddApv(void *p);
+   static void deleteArray_CGuiAddApv(void *p);
+   static void destruct_CGuiAddApv(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::CGuiAddApv*)
+   {
+      ::CGuiAddApv *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::CGuiAddApv));
+      static ::ROOT::TGenericClassInfo 
+         instance("CGuiAddApv", "GuiAddApv.h", 16,
+                  typeid(::CGuiAddApv), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &CGuiAddApv_Dictionary, isa_proxy, 4,
+                  sizeof(::CGuiAddApv) );
+      instance.SetDelete(&delete_CGuiAddApv);
+      instance.SetDeleteArray(&deleteArray_CGuiAddApv);
+      instance.SetDestructor(&destruct_CGuiAddApv);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::CGuiAddApv*)
+   {
+      return GenerateInitInstanceLocal((::CGuiAddApv*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::CGuiAddApv*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *CGuiAddApv_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::CGuiAddApv*)0x0)->GetClass();
+      CGuiAddApv_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void CGuiAddApv_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *CGuiConfig_Dictionary();
+   static void CGuiConfig_TClassManip(TClass*);
+   static void delete_CGuiConfig(void *p);
+   static void deleteArray_CGuiConfig(void *p);
+   static void destruct_CGuiConfig(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::CGuiConfig*)
+   {
+      ::CGuiConfig *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::CGuiConfig));
+      static ::ROOT::TGenericClassInfo 
+         instance("CGuiConfig", "GuiConfig.h", 22,
+                  typeid(::CGuiConfig), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &CGuiConfig_Dictionary, isa_proxy, 4,
+                  sizeof(::CGuiConfig) );
+      instance.SetDelete(&delete_CGuiConfig);
+      instance.SetDeleteArray(&deleteArray_CGuiConfig);
+      instance.SetDestructor(&destruct_CGuiConfig);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::CGuiConfig*)
+   {
+      return GenerateInitInstanceLocal((::CGuiConfig*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::CGuiConfig*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *CGuiConfig_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::CGuiConfig*)0x0)->GetClass();
+      CGuiConfig_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void CGuiConfig_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace browser {
+//______________________________________________________________________________
+atomic_TClass_ptr CGuiMainFrameOnline::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *CGuiMainFrameOnline::Class_Name()
+{
+   return "browser::CGuiMainFrameOnline";
+}
+
+//______________________________________________________________________________
+const char *CGuiMainFrameOnline::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiMainFrameOnline*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int CGuiMainFrameOnline::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiMainFrameOnline*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *CGuiMainFrameOnline::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiMainFrameOnline*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *CGuiMainFrameOnline::Class()
+{
+   if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiMainFrameOnline*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
+} // namespace browser
+namespace browser {
+//______________________________________________________________________________
+atomic_TClass_ptr CGuiMainFrameOffline::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *CGuiMainFrameOffline::Class_Name()
+{
+   return "browser::CGuiMainFrameOffline";
+}
+
+//______________________________________________________________________________
+const char *CGuiMainFrameOffline::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiMainFrameOffline*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int CGuiMainFrameOffline::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiMainFrameOffline*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *CGuiMainFrameOffline::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiMainFrameOffline*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *CGuiMainFrameOffline::Class()
+{
+   if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::browser::CGuiMainFrameOffline*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
+} // namespace browser
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_browsercLcLCGuiBase(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) ::browser::CGuiBase : new ::browser::CGuiBase;
+   }
+   static void *newArray_browsercLcLCGuiBase(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) ::browser::CGuiBase[nElements] : new ::browser::CGuiBase[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiBase(void *p) {
+      delete ((::browser::CGuiBase*)p);
+   }
+   static void deleteArray_browsercLcLCGuiBase(void *p) {
+      delete [] ((::browser::CGuiBase*)p);
+   }
+   static void destruct_browsercLcLCGuiBase(void *p) {
+      typedef ::browser::CGuiBase current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiBase
+
+namespace ROOT {
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiMainFrame(void *p) {
+      delete ((::browser::CGuiMainFrame*)p);
+   }
+   static void deleteArray_browsercLcLCGuiMainFrame(void *p) {
+      delete [] ((::browser::CGuiMainFrame*)p);
+   }
+   static void destruct_browsercLcLCGuiMainFrame(void *p) {
+      typedef ::browser::CGuiMainFrame current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiMainFrame
+
+namespace browser {
+//______________________________________________________________________________
+void CGuiMainFrameOnline::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class browser::CGuiMainFrameOnline.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(browser::CGuiMainFrameOnline::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(browser::CGuiMainFrameOnline::Class(),this);
+   }
+}
+
+} // namespace browser
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_browsercLcLCGuiMainFrameOnline(void *p) {
+      return  p ? new(p) ::browser::CGuiMainFrameOnline : new ::browser::CGuiMainFrameOnline;
+   }
+   static void *newArray_browsercLcLCGuiMainFrameOnline(Long_t nElements, void *p) {
+      return p ? new(p) ::browser::CGuiMainFrameOnline[nElements] : new ::browser::CGuiMainFrameOnline[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiMainFrameOnline(void *p) {
+      delete ((::browser::CGuiMainFrameOnline*)p);
+   }
+   static void deleteArray_browsercLcLCGuiMainFrameOnline(void *p) {
+      delete [] ((::browser::CGuiMainFrameOnline*)p);
+   }
+   static void destruct_browsercLcLCGuiMainFrameOnline(void *p) {
+      typedef ::browser::CGuiMainFrameOnline current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiMainFrameOnline
+
+namespace browser {
+//______________________________________________________________________________
+void CGuiMainFrameOffline::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class browser::CGuiMainFrameOffline.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(browser::CGuiMainFrameOffline::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(browser::CGuiMainFrameOffline::Class(),this);
+   }
+}
+
+} // namespace browser
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_browsercLcLCGuiMainFrameOffline(void *p) {
+      return  p ? new(p) ::browser::CGuiMainFrameOffline : new ::browser::CGuiMainFrameOffline;
+   }
+   static void *newArray_browsercLcLCGuiMainFrameOffline(Long_t nElements, void *p) {
+      return p ? new(p) ::browser::CGuiMainFrameOffline[nElements] : new ::browser::CGuiMainFrameOffline[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiMainFrameOffline(void *p) {
+      delete ((::browser::CGuiMainFrameOffline*)p);
+   }
+   static void deleteArray_browsercLcLCGuiMainFrameOffline(void *p) {
+      delete [] ((::browser::CGuiMainFrameOffline*)p);
+   }
+   static void destruct_browsercLcLCGuiMainFrameOffline(void *p) {
+      typedef ::browser::CGuiMainFrameOffline current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiMainFrameOffline
+
+namespace ROOT {
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiTab(void *p) {
+      delete ((::browser::CGuiTab*)p);
+   }
+   static void deleteArray_browsercLcLCGuiTab(void *p) {
+      delete [] ((::browser::CGuiTab*)p);
+   }
+   static void destruct_browsercLcLCGuiTab(void *p) {
+      typedef ::browser::CGuiTab current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiTab
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_browsercLcLCGuiTabDetector(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) ::browser::CGuiTabDetector : new ::browser::CGuiTabDetector;
+   }
+   static void *newArray_browsercLcLCGuiTabDetector(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) ::browser::CGuiTabDetector[nElements] : new ::browser::CGuiTabDetector[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiTabDetector(void *p) {
+      delete ((::browser::CGuiTabDetector*)p);
+   }
+   static void deleteArray_browsercLcLCGuiTabDetector(void *p) {
+      delete [] ((::browser::CGuiTabDetector*)p);
+   }
+   static void destruct_browsercLcLCGuiTabDetector(void *p) {
+      typedef ::browser::CGuiTabDetector current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiTabDetector
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_browsercLcLCGuiTabMainOptions(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) ::browser::CGuiTabMainOptions : new ::browser::CGuiTabMainOptions;
+   }
+   static void *newArray_browsercLcLCGuiTabMainOptions(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) ::browser::CGuiTabMainOptions[nElements] : new ::browser::CGuiTabMainOptions[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiTabMainOptions(void *p) {
+      delete ((::browser::CGuiTabMainOptions*)p);
+   }
+   static void deleteArray_browsercLcLCGuiTabMainOptions(void *p) {
+      delete [] ((::browser::CGuiTabMainOptions*)p);
+   }
+   static void destruct_browsercLcLCGuiTabMainOptions(void *p) {
+      typedef ::browser::CGuiTabMainOptions current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiTabMainOptions
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_browsercLcLCGuiTabPlane(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) ::browser::CGuiTabPlane : new ::browser::CGuiTabPlane;
+   }
+   static void *newArray_browsercLcLCGuiTabPlane(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) ::browser::CGuiTabPlane[nElements] : new ::browser::CGuiTabPlane[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiTabPlane(void *p) {
+      delete ((::browser::CGuiTabPlane*)p);
+   }
+   static void deleteArray_browsercLcLCGuiTabPlane(void *p) {
+      delete [] ((::browser::CGuiTabPlane*)p);
+   }
+   static void destruct_browsercLcLCGuiTabPlane(void *p) {
+      typedef ::browser::CGuiTabPlane current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiTabPlane
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_browsercLcLCGuiTabReadout(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) ::browser::CGuiTabReadout : new ::browser::CGuiTabReadout;
+   }
+   static void *newArray_browsercLcLCGuiTabReadout(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) ::browser::CGuiTabReadout[nElements] : new ::browser::CGuiTabReadout[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiTabReadout(void *p) {
+      delete ((::browser::CGuiTabReadout*)p);
+   }
+   static void deleteArray_browsercLcLCGuiTabReadout(void *p) {
+      delete [] ((::browser::CGuiTabReadout*)p);
+   }
+   static void destruct_browsercLcLCGuiTabReadout(void *p) {
+      typedef ::browser::CGuiTabReadout current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiTabReadout
+
+namespace ROOT {
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiTabDetectorCrosstalk(void *p) {
+      delete ((::browser::CGuiTabDetectorCrosstalk*)p);
+   }
+   static void deleteArray_browsercLcLCGuiTabDetectorCrosstalk(void *p) {
+      delete [] ((::browser::CGuiTabDetectorCrosstalk*)p);
+   }
+   static void destruct_browsercLcLCGuiTabDetectorCrosstalk(void *p) {
+      typedef ::browser::CGuiTabDetectorCrosstalk current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiTabDetectorCrosstalk
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_browsercLcLCGuiTabChamber(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) ::browser::CGuiTabChamber : new ::browser::CGuiTabChamber;
+   }
+   static void *newArray_browsercLcLCGuiTabChamber(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) ::browser::CGuiTabChamber[nElements] : new ::browser::CGuiTabChamber[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiTabChamber(void *p) {
+      delete ((::browser::CGuiTabChamber*)p);
+   }
+   static void deleteArray_browsercLcLCGuiTabChamber(void *p) {
+      delete [] ((::browser::CGuiTabChamber*)p);
+   }
+   static void destruct_browsercLcLCGuiTabChamber(void *p) {
+      typedef ::browser::CGuiTabChamber current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiTabChamber
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_browsercLcLCGuiTabXml(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) ::browser::CGuiTabXml : new ::browser::CGuiTabXml;
+   }
+   static void *newArray_browsercLcLCGuiTabXml(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) ::browser::CGuiTabXml[nElements] : new ::browser::CGuiTabXml[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiTabXml(void *p) {
+      delete ((::browser::CGuiTabXml*)p);
+   }
+   static void deleteArray_browsercLcLCGuiTabXml(void *p) {
+      delete [] ((::browser::CGuiTabXml*)p);
+   }
+   static void destruct_browsercLcLCGuiTabXml(void *p) {
+      typedef ::browser::CGuiTabXml current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiTabXml
+
+namespace ROOT {
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiTabFec(void *p) {
+      delete ((::browser::CGuiTabFec*)p);
+   }
+   static void deleteArray_browsercLcLCGuiTabFec(void *p) {
+      delete [] ((::browser::CGuiTabFec*)p);
+   }
+   static void destruct_browsercLcLCGuiTabFec(void *p) {
+      typedef ::browser::CGuiTabFec current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiTabFec
+
+namespace ROOT {
+   // Wrapper around operator delete
+   static void delete_CGuiSaveFec(void *p) {
+      delete ((::CGuiSaveFec*)p);
+   }
+   static void deleteArray_CGuiSaveFec(void *p) {
+      delete [] ((::CGuiSaveFec*)p);
+   }
+   static void destruct_CGuiSaveFec(void *p) {
+      typedef ::CGuiSaveFec current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::CGuiSaveFec
+
+namespace ROOT {
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiTabDetXml(void *p) {
+      delete ((::browser::CGuiTabDetXml*)p);
+   }
+   static void deleteArray_browsercLcLCGuiTabDetXml(void *p) {
+      delete [] ((::browser::CGuiTabDetXml*)p);
+   }
+   static void destruct_browsercLcLCGuiTabDetXml(void *p) {
+      typedef ::browser::CGuiTabDetXml current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiTabDetXml
+
+namespace ROOT {
+   // Wrapper around operator delete
+   static void delete_CGuiSaveDet(void *p) {
+      delete ((::CGuiSaveDet*)p);
+   }
+   static void deleteArray_CGuiSaveDet(void *p) {
+      delete [] ((::CGuiSaveDet*)p);
+   }
+   static void destruct_CGuiSaveDet(void *p) {
+      typedef ::CGuiSaveDet current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::CGuiSaveDet
+
+namespace ROOT {
+   // Wrapper around operator delete
+   static void delete_browsercLcLCGuiTabSaveXml(void *p) {
+      delete ((::browser::CGuiTabSaveXml*)p);
+   }
+   static void deleteArray_browsercLcLCGuiTabSaveXml(void *p) {
+      delete [] ((::browser::CGuiTabSaveXml*)p);
+   }
+   static void destruct_browsercLcLCGuiTabSaveXml(void *p) {
+      typedef ::browser::CGuiTabSaveXml current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::browser::CGuiTabSaveXml
+
+namespace ROOT {
+   // Wrapper around operator delete
+   static void delete_CGuiAddApv(void *p) {
+      delete ((::CGuiAddApv*)p);
+   }
+   static void deleteArray_CGuiAddApv(void *p) {
+      delete [] ((::CGuiAddApv*)p);
+   }
+   static void destruct_CGuiAddApv(void *p) {
+      typedef ::CGuiAddApv current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::CGuiAddApv
+
+namespace ROOT {
+   // Wrapper around operator delete
+   static void delete_CGuiConfig(void *p) {
+      delete ((::CGuiConfig*)p);
+   }
+   static void deleteArray_CGuiConfig(void *p) {
+      delete [] ((::CGuiConfig*)p);
+   }
+   static void destruct_CGuiConfig(void *p) {
+      typedef ::CGuiConfig current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::CGuiConfig
+
+namespace ROOT {
+   static TClass *vectorlEvectorlEunsignedsPintgRsPgR_Dictionary();
+   static void vectorlEvectorlEunsignedsPintgRsPgR_TClassManip(TClass*);
+   static void *new_vectorlEvectorlEunsignedsPintgRsPgR(void *p = 0);
+   static void *newArray_vectorlEvectorlEunsignedsPintgRsPgR(Long_t size, void *p);
+   static void delete_vectorlEvectorlEunsignedsPintgRsPgR(void *p);
+   static void deleteArray_vectorlEvectorlEunsignedsPintgRsPgR(void *p);
+   static void destruct_vectorlEvectorlEunsignedsPintgRsPgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<vector<unsigned int> >*)
+   {
+      vector<vector<unsigned int> > *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<vector<unsigned int> >));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<vector<unsigned int> >", -2, "vector", 216,
+                  typeid(vector<vector<unsigned int> >), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlEvectorlEunsignedsPintgRsPgR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<vector<unsigned int> >) );
+      instance.SetNew(&new_vectorlEvectorlEunsignedsPintgRsPgR);
+      instance.SetNewArray(&newArray_vectorlEvectorlEunsignedsPintgRsPgR);
+      instance.SetDelete(&delete_vectorlEvectorlEunsignedsPintgRsPgR);
+      instance.SetDeleteArray(&deleteArray_vectorlEvectorlEunsignedsPintgRsPgR);
+      instance.SetDestructor(&destruct_vectorlEvectorlEunsignedsPintgRsPgR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<vector<unsigned int> > >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<vector<unsigned int> >*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEvectorlEunsignedsPintgRsPgR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<vector<unsigned int> >*)0x0)->GetClass();
+      vectorlEvectorlEunsignedsPintgRsPgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEvectorlEunsignedsPintgRsPgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEvectorlEunsignedsPintgRsPgR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<vector<unsigned int> > : new vector<vector<unsigned int> >;
+   }
+   static void *newArray_vectorlEvectorlEunsignedsPintgRsPgR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<vector<unsigned int> >[nElements] : new vector<vector<unsigned int> >[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEvectorlEunsignedsPintgRsPgR(void *p) {
+      delete ((vector<vector<unsigned int> >*)p);
+   }
+   static void deleteArray_vectorlEvectorlEunsignedsPintgRsPgR(void *p) {
+      delete [] ((vector<vector<unsigned int> >*)p);
+   }
+   static void destruct_vectorlEvectorlEunsignedsPintgRsPgR(void *p) {
+      typedef vector<vector<unsigned int> > current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<vector<unsigned int> >
+
+namespace ROOT {
+   static TClass *vectorlEvectorlEstringgRsPgR_Dictionary();
+   static void vectorlEvectorlEstringgRsPgR_TClassManip(TClass*);
+   static void *new_vectorlEvectorlEstringgRsPgR(void *p = 0);
+   static void *newArray_vectorlEvectorlEstringgRsPgR(Long_t size, void *p);
+   static void delete_vectorlEvectorlEstringgRsPgR(void *p);
+   static void deleteArray_vectorlEvectorlEstringgRsPgR(void *p);
+   static void destruct_vectorlEvectorlEstringgRsPgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<vector<string> >*)
+   {
+      vector<vector<string> > *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<vector<string> >));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<vector<string> >", -2, "vector", 216,
+                  typeid(vector<vector<string> >), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlEvectorlEstringgRsPgR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<vector<string> >) );
+      instance.SetNew(&new_vectorlEvectorlEstringgRsPgR);
+      instance.SetNewArray(&newArray_vectorlEvectorlEstringgRsPgR);
+      instance.SetDelete(&delete_vectorlEvectorlEstringgRsPgR);
+      instance.SetDeleteArray(&deleteArray_vectorlEvectorlEstringgRsPgR);
+      instance.SetDestructor(&destruct_vectorlEvectorlEstringgRsPgR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<vector<string> > >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<vector<string> >*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEvectorlEstringgRsPgR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<vector<string> >*)0x0)->GetClass();
+      vectorlEvectorlEstringgRsPgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEvectorlEstringgRsPgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEvectorlEstringgRsPgR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<vector<string> > : new vector<vector<string> >;
+   }
+   static void *newArray_vectorlEvectorlEstringgRsPgR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<vector<string> >[nElements] : new vector<vector<string> >[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEvectorlEstringgRsPgR(void *p) {
+      delete ((vector<vector<string> >*)p);
+   }
+   static void deleteArray_vectorlEvectorlEstringgRsPgR(void *p) {
+      delete [] ((vector<vector<string> >*)p);
+   }
+   static void destruct_vectorlEvectorlEstringgRsPgR(void *p) {
+      typedef vector<vector<string> > current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<vector<string> >
+
+namespace ROOT {
+   static TClass *vectorlEvectorlEshortgRsPgR_Dictionary();
+   static void vectorlEvectorlEshortgRsPgR_TClassManip(TClass*);
+   static void *new_vectorlEvectorlEshortgRsPgR(void *p = 0);
+   static void *newArray_vectorlEvectorlEshortgRsPgR(Long_t size, void *p);
+   static void delete_vectorlEvectorlEshortgRsPgR(void *p);
+   static void deleteArray_vectorlEvectorlEshortgRsPgR(void *p);
+   static void destruct_vectorlEvectorlEshortgRsPgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<vector<short> >*)
+   {
+      vector<vector<short> > *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<vector<short> >));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<vector<short> >", -2, "vector", 216,
+                  typeid(vector<vector<short> >), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlEvectorlEshortgRsPgR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<vector<short> >) );
+      instance.SetNew(&new_vectorlEvectorlEshortgRsPgR);
+      instance.SetNewArray(&newArray_vectorlEvectorlEshortgRsPgR);
+      instance.SetDelete(&delete_vectorlEvectorlEshortgRsPgR);
+      instance.SetDeleteArray(&deleteArray_vectorlEvectorlEshortgRsPgR);
+      instance.SetDestructor(&destruct_vectorlEvectorlEshortgRsPgR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<vector<short> > >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<vector<short> >*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEvectorlEshortgRsPgR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<vector<short> >*)0x0)->GetClass();
+      vectorlEvectorlEshortgRsPgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEvectorlEshortgRsPgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEvectorlEshortgRsPgR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<vector<short> > : new vector<vector<short> >;
+   }
+   static void *newArray_vectorlEvectorlEshortgRsPgR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<vector<short> >[nElements] : new vector<vector<short> >[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEvectorlEshortgRsPgR(void *p) {
+      delete ((vector<vector<short> >*)p);
+   }
+   static void deleteArray_vectorlEvectorlEshortgRsPgR(void *p) {
+      delete [] ((vector<vector<short> >*)p);
+   }
+   static void destruct_vectorlEvectorlEshortgRsPgR(void *p) {
+      typedef vector<vector<short> > current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<vector<short> >
+
+namespace ROOT {
+   static TClass *vectorlEvectorlEintgRsPgR_Dictionary();
+   static void vectorlEvectorlEintgRsPgR_TClassManip(TClass*);
+   static void *new_vectorlEvectorlEintgRsPgR(void *p = 0);
+   static void *newArray_vectorlEvectorlEintgRsPgR(Long_t size, void *p);
+   static void delete_vectorlEvectorlEintgRsPgR(void *p);
+   static void deleteArray_vectorlEvectorlEintgRsPgR(void *p);
+   static void destruct_vectorlEvectorlEintgRsPgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<vector<int> >*)
+   {
+      vector<vector<int> > *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<vector<int> >));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<vector<int> >", -2, "vector", 216,
+                  typeid(vector<vector<int> >), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlEvectorlEintgRsPgR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<vector<int> >) );
+      instance.SetNew(&new_vectorlEvectorlEintgRsPgR);
+      instance.SetNewArray(&newArray_vectorlEvectorlEintgRsPgR);
+      instance.SetDelete(&delete_vectorlEvectorlEintgRsPgR);
+      instance.SetDeleteArray(&deleteArray_vectorlEvectorlEintgRsPgR);
+      instance.SetDestructor(&destruct_vectorlEvectorlEintgRsPgR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<vector<int> > >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<vector<int> >*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEvectorlEintgRsPgR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<vector<int> >*)0x0)->GetClass();
+      vectorlEvectorlEintgRsPgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEvectorlEintgRsPgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEvectorlEintgRsPgR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<vector<int> > : new vector<vector<int> >;
+   }
+   static void *newArray_vectorlEvectorlEintgRsPgR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<vector<int> >[nElements] : new vector<vector<int> >[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEvectorlEintgRsPgR(void *p) {
+      delete ((vector<vector<int> >*)p);
+   }
+   static void deleteArray_vectorlEvectorlEintgRsPgR(void *p) {
+      delete [] ((vector<vector<int> >*)p);
+   }
+   static void destruct_vectorlEvectorlEintgRsPgR(void *p) {
+      typedef vector<vector<int> > current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<vector<int> >
+
+namespace ROOT {
+   static TClass *vectorlEvectorlEdoublegRsPgR_Dictionary();
+   static void vectorlEvectorlEdoublegRsPgR_TClassManip(TClass*);
+   static void *new_vectorlEvectorlEdoublegRsPgR(void *p = 0);
+   static void *newArray_vectorlEvectorlEdoublegRsPgR(Long_t size, void *p);
+   static void delete_vectorlEvectorlEdoublegRsPgR(void *p);
+   static void deleteArray_vectorlEvectorlEdoublegRsPgR(void *p);
+   static void destruct_vectorlEvectorlEdoublegRsPgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<vector<double> >*)
+   {
+      vector<vector<double> > *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<vector<double> >));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<vector<double> >", -2, "vector", 216,
+                  typeid(vector<vector<double> >), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlEvectorlEdoublegRsPgR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<vector<double> >) );
+      instance.SetNew(&new_vectorlEvectorlEdoublegRsPgR);
+      instance.SetNewArray(&newArray_vectorlEvectorlEdoublegRsPgR);
+      instance.SetDelete(&delete_vectorlEvectorlEdoublegRsPgR);
+      instance.SetDeleteArray(&deleteArray_vectorlEvectorlEdoublegRsPgR);
+      instance.SetDestructor(&destruct_vectorlEvectorlEdoublegRsPgR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<vector<double> > >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<vector<double> >*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEvectorlEdoublegRsPgR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<vector<double> >*)0x0)->GetClass();
+      vectorlEvectorlEdoublegRsPgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEvectorlEdoublegRsPgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEvectorlEdoublegRsPgR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<vector<double> > : new vector<vector<double> >;
+   }
+   static void *newArray_vectorlEvectorlEdoublegRsPgR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<vector<double> >[nElements] : new vector<vector<double> >[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEvectorlEdoublegRsPgR(void *p) {
+      delete ((vector<vector<double> >*)p);
+   }
+   static void deleteArray_vectorlEvectorlEdoublegRsPgR(void *p) {
+      delete [] ((vector<vector<double> >*)p);
+   }
+   static void destruct_vectorlEvectorlEdoublegRsPgR(void *p) {
+      typedef vector<vector<double> > current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<vector<double> >
+
+namespace ROOT {
+   static TClass *vectorlEunsignedsPlonggR_Dictionary();
+   static void vectorlEunsignedsPlonggR_TClassManip(TClass*);
+   static void *new_vectorlEunsignedsPlonggR(void *p = 0);
+   static void *newArray_vectorlEunsignedsPlonggR(Long_t size, void *p);
+   static void delete_vectorlEunsignedsPlonggR(void *p);
+   static void deleteArray_vectorlEunsignedsPlonggR(void *p);
+   static void destruct_vectorlEunsignedsPlonggR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<unsigned long>*)
+   {
+      vector<unsigned long> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<unsigned long>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<unsigned long>", -2, "vector", 216,
+                  typeid(vector<unsigned long>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlEunsignedsPlonggR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<unsigned long>) );
+      instance.SetNew(&new_vectorlEunsignedsPlonggR);
+      instance.SetNewArray(&newArray_vectorlEunsignedsPlonggR);
+      instance.SetDelete(&delete_vectorlEunsignedsPlonggR);
+      instance.SetDeleteArray(&deleteArray_vectorlEunsignedsPlonggR);
+      instance.SetDestructor(&destruct_vectorlEunsignedsPlonggR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<unsigned long> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<unsigned long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEunsignedsPlonggR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<unsigned long>*)0x0)->GetClass();
+      vectorlEunsignedsPlonggR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEunsignedsPlonggR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEunsignedsPlonggR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<unsigned long> : new vector<unsigned long>;
+   }
+   static void *newArray_vectorlEunsignedsPlonggR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<unsigned long>[nElements] : new vector<unsigned long>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEunsignedsPlonggR(void *p) {
+      delete ((vector<unsigned long>*)p);
+   }
+   static void deleteArray_vectorlEunsignedsPlonggR(void *p) {
+      delete [] ((vector<unsigned long>*)p);
+   }
+   static void destruct_vectorlEunsignedsPlonggR(void *p) {
+      typedef vector<unsigned long> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<unsigned long>
+
+namespace ROOT {
+   static TClass *vectorlEunsignedsPintgR_Dictionary();
+   static void vectorlEunsignedsPintgR_TClassManip(TClass*);
+   static void *new_vectorlEunsignedsPintgR(void *p = 0);
+   static void *newArray_vectorlEunsignedsPintgR(Long_t size, void *p);
+   static void delete_vectorlEunsignedsPintgR(void *p);
+   static void deleteArray_vectorlEunsignedsPintgR(void *p);
+   static void destruct_vectorlEunsignedsPintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<unsigned int>*)
+   {
+      vector<unsigned int> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<unsigned int>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<unsigned int>", -2, "vector", 216,
+                  typeid(vector<unsigned int>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlEunsignedsPintgR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<unsigned int>) );
+      instance.SetNew(&new_vectorlEunsignedsPintgR);
+      instance.SetNewArray(&newArray_vectorlEunsignedsPintgR);
+      instance.SetDelete(&delete_vectorlEunsignedsPintgR);
+      instance.SetDeleteArray(&deleteArray_vectorlEunsignedsPintgR);
+      instance.SetDestructor(&destruct_vectorlEunsignedsPintgR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<unsigned int> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<unsigned int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEunsignedsPintgR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<unsigned int>*)0x0)->GetClass();
+      vectorlEunsignedsPintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEunsignedsPintgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEunsignedsPintgR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<unsigned int> : new vector<unsigned int>;
+   }
+   static void *newArray_vectorlEunsignedsPintgR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<unsigned int>[nElements] : new vector<unsigned int>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEunsignedsPintgR(void *p) {
+      delete ((vector<unsigned int>*)p);
+   }
+   static void deleteArray_vectorlEunsignedsPintgR(void *p) {
+      delete [] ((vector<unsigned int>*)p);
+   }
+   static void destruct_vectorlEunsignedsPintgR(void *p) {
+      typedef vector<unsigned int> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<unsigned int>
+
+namespace ROOT {
+   static TClass *vectorlEstringgR_Dictionary();
+   static void vectorlEstringgR_TClassManip(TClass*);
+   static void *new_vectorlEstringgR(void *p = 0);
+   static void *newArray_vectorlEstringgR(Long_t size, void *p);
+   static void delete_vectorlEstringgR(void *p);
+   static void deleteArray_vectorlEstringgR(void *p);
+   static void destruct_vectorlEstringgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<string>*)
+   {
+      vector<string> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<string>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<string>", -2, "vector", 216,
+                  typeid(vector<string>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlEstringgR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<string>) );
+      instance.SetNew(&new_vectorlEstringgR);
+      instance.SetNewArray(&newArray_vectorlEstringgR);
+      instance.SetDelete(&delete_vectorlEstringgR);
+      instance.SetDeleteArray(&deleteArray_vectorlEstringgR);
+      instance.SetDestructor(&destruct_vectorlEstringgR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<string> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<string>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEstringgR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<string>*)0x0)->GetClass();
+      vectorlEstringgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEstringgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEstringgR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<string> : new vector<string>;
+   }
+   static void *newArray_vectorlEstringgR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<string>[nElements] : new vector<string>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEstringgR(void *p) {
+      delete ((vector<string>*)p);
+   }
+   static void deleteArray_vectorlEstringgR(void *p) {
+      delete [] ((vector<string>*)p);
+   }
+   static void destruct_vectorlEstringgR(void *p) {
+      typedef vector<string> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<string>
+
+namespace ROOT {
+   static TClass *vectorlEshortgR_Dictionary();
+   static void vectorlEshortgR_TClassManip(TClass*);
+   static void *new_vectorlEshortgR(void *p = 0);
+   static void *newArray_vectorlEshortgR(Long_t size, void *p);
+   static void delete_vectorlEshortgR(void *p);
+   static void deleteArray_vectorlEshortgR(void *p);
+   static void destruct_vectorlEshortgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<short>*)
+   {
+      vector<short> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<short>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<short>", -2, "vector", 216,
+                  typeid(vector<short>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlEshortgR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<short>) );
+      instance.SetNew(&new_vectorlEshortgR);
+      instance.SetNewArray(&newArray_vectorlEshortgR);
+      instance.SetDelete(&delete_vectorlEshortgR);
+      instance.SetDeleteArray(&deleteArray_vectorlEshortgR);
+      instance.SetDestructor(&destruct_vectorlEshortgR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<short> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<short>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEshortgR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<short>*)0x0)->GetClass();
+      vectorlEshortgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEshortgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEshortgR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<short> : new vector<short>;
+   }
+   static void *newArray_vectorlEshortgR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<short>[nElements] : new vector<short>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEshortgR(void *p) {
+      delete ((vector<short>*)p);
+   }
+   static void deleteArray_vectorlEshortgR(void *p) {
+      delete [] ((vector<short>*)p);
+   }
+   static void destruct_vectorlEshortgR(void *p) {
+      typedef vector<short> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<short>
+
+namespace ROOT {
+   static TClass *vectorlElonggR_Dictionary();
+   static void vectorlElonggR_TClassManip(TClass*);
+   static void *new_vectorlElonggR(void *p = 0);
+   static void *newArray_vectorlElonggR(Long_t size, void *p);
+   static void delete_vectorlElonggR(void *p);
+   static void deleteArray_vectorlElonggR(void *p);
+   static void destruct_vectorlElonggR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<long>*)
+   {
+      vector<long> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<long>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<long>", -2, "vector", 216,
+                  typeid(vector<long>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlElonggR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<long>) );
+      instance.SetNew(&new_vectorlElonggR);
+      instance.SetNewArray(&newArray_vectorlElonggR);
+      instance.SetDelete(&delete_vectorlElonggR);
+      instance.SetDeleteArray(&deleteArray_vectorlElonggR);
+      instance.SetDestructor(&destruct_vectorlElonggR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<long> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<long>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlElonggR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<long>*)0x0)->GetClass();
+      vectorlElonggR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlElonggR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlElonggR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<long> : new vector<long>;
+   }
+   static void *newArray_vectorlElonggR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<long>[nElements] : new vector<long>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlElonggR(void *p) {
+      delete ((vector<long>*)p);
+   }
+   static void deleteArray_vectorlElonggR(void *p) {
+      delete [] ((vector<long>*)p);
+   }
+   static void destruct_vectorlElonggR(void *p) {
+      typedef vector<long> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<long>
+
+namespace ROOT {
+   static TClass *vectorlEintgR_Dictionary();
+   static void vectorlEintgR_TClassManip(TClass*);
+   static void *new_vectorlEintgR(void *p = 0);
+   static void *newArray_vectorlEintgR(Long_t size, void *p);
+   static void delete_vectorlEintgR(void *p);
+   static void deleteArray_vectorlEintgR(void *p);
+   static void destruct_vectorlEintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<int>*)
+   {
+      vector<int> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<int>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<int>", -2, "vector", 216,
+                  typeid(vector<int>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlEintgR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<int>) );
+      instance.SetNew(&new_vectorlEintgR);
+      instance.SetNewArray(&newArray_vectorlEintgR);
+      instance.SetDelete(&delete_vectorlEintgR);
+      instance.SetDeleteArray(&deleteArray_vectorlEintgR);
+      instance.SetDestructor(&destruct_vectorlEintgR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<int> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEintgR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<int>*)0x0)->GetClass();
+      vectorlEintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEintgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEintgR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<int> : new vector<int>;
+   }
+   static void *newArray_vectorlEintgR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<int>[nElements] : new vector<int>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEintgR(void *p) {
+      delete ((vector<int>*)p);
+   }
+   static void deleteArray_vectorlEintgR(void *p) {
+      delete [] ((vector<int>*)p);
+   }
+   static void destruct_vectorlEintgR(void *p) {
+      typedef vector<int> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<int>
+
+namespace ROOT {
+   static TClass *vectorlEdoublegR_Dictionary();
+   static void vectorlEdoublegR_TClassManip(TClass*);
+   static void *new_vectorlEdoublegR(void *p = 0);
+   static void *newArray_vectorlEdoublegR(Long_t size, void *p);
+   static void delete_vectorlEdoublegR(void *p);
+   static void deleteArray_vectorlEdoublegR(void *p);
+   static void destruct_vectorlEdoublegR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<double>*)
+   {
+      vector<double> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<double>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<double>", -2, "vector", 216,
+                  typeid(vector<double>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlEdoublegR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<double>) );
+      instance.SetNew(&new_vectorlEdoublegR);
+      instance.SetNewArray(&newArray_vectorlEdoublegR);
+      instance.SetDelete(&delete_vectorlEdoublegR);
+      instance.SetDeleteArray(&deleteArray_vectorlEdoublegR);
+      instance.SetDestructor(&destruct_vectorlEdoublegR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<double> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<double>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEdoublegR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<double>*)0x0)->GetClass();
+      vectorlEdoublegR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEdoublegR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEdoublegR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<double> : new vector<double>;
+   }
+   static void *newArray_vectorlEdoublegR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<double>[nElements] : new vector<double>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEdoublegR(void *p) {
+      delete ((vector<double>*)p);
+   }
+   static void deleteArray_vectorlEdoublegR(void *p) {
+      delete [] ((vector<double>*)p);
+   }
+   static void destruct_vectorlEdoublegR(void *p) {
+      typedef vector<double> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<double>
+
+namespace ROOT {
+   static TClass *vectorlEbrowsercLcLCGuiTabmUgR_Dictionary();
+   static void vectorlEbrowsercLcLCGuiTabmUgR_TClassManip(TClass*);
+   static void *new_vectorlEbrowsercLcLCGuiTabmUgR(void *p = 0);
+   static void *newArray_vectorlEbrowsercLcLCGuiTabmUgR(Long_t size, void *p);
+   static void delete_vectorlEbrowsercLcLCGuiTabmUgR(void *p);
+   static void deleteArray_vectorlEbrowsercLcLCGuiTabmUgR(void *p);
+   static void destruct_vectorlEbrowsercLcLCGuiTabmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<browser::CGuiTab*>*)
+   {
+      vector<browser::CGuiTab*> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<browser::CGuiTab*>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<browser::CGuiTab*>", -2, "vector", 216,
+                  typeid(vector<browser::CGuiTab*>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlEbrowsercLcLCGuiTabmUgR_Dictionary, isa_proxy, 0,
+                  sizeof(vector<browser::CGuiTab*>) );
+      instance.SetNew(&new_vectorlEbrowsercLcLCGuiTabmUgR);
+      instance.SetNewArray(&newArray_vectorlEbrowsercLcLCGuiTabmUgR);
+      instance.SetDelete(&delete_vectorlEbrowsercLcLCGuiTabmUgR);
+      instance.SetDeleteArray(&deleteArray_vectorlEbrowsercLcLCGuiTabmUgR);
+      instance.SetDestructor(&destruct_vectorlEbrowsercLcLCGuiTabmUgR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<browser::CGuiTab*> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<browser::CGuiTab*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlEbrowsercLcLCGuiTabmUgR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<browser::CGuiTab*>*)0x0)->GetClass();
+      vectorlEbrowsercLcLCGuiTabmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlEbrowsercLcLCGuiTabmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlEbrowsercLcLCGuiTabmUgR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<browser::CGuiTab*> : new vector<browser::CGuiTab*>;
+   }
+   static void *newArray_vectorlEbrowsercLcLCGuiTabmUgR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<browser::CGuiTab*>[nElements] : new vector<browser::CGuiTab*>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlEbrowsercLcLCGuiTabmUgR(void *p) {
+      delete ((vector<browser::CGuiTab*>*)p);
+   }
+   static void deleteArray_vectorlEbrowsercLcLCGuiTabmUgR(void *p) {
+      delete [] ((vector<browser::CGuiTab*>*)p);
+   }
+   static void destruct_vectorlEbrowsercLcLCGuiTabmUgR(void *p) {
+      typedef vector<browser::CGuiTab*> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<browser::CGuiTab*>
+
+namespace ROOT {
+   static TClass *vectorlETGTextEntrymUgR_Dictionary();
+   static void vectorlETGTextEntrymUgR_TClassManip(TClass*);
+   static void *new_vectorlETGTextEntrymUgR(void *p = 0);
+   static void *newArray_vectorlETGTextEntrymUgR(Long_t size, void *p);
+   static void delete_vectorlETGTextEntrymUgR(void *p);
+   static void deleteArray_vectorlETGTextEntrymUgR(void *p);
+   static void destruct_vectorlETGTextEntrymUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<TGTextEntry*>*)
+   {
+      vector<TGTextEntry*> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<TGTextEntry*>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<TGTextEntry*>", -2, "vector", 216,
+                  typeid(vector<TGTextEntry*>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlETGTextEntrymUgR_Dictionary, isa_proxy, 0,
+                  sizeof(vector<TGTextEntry*>) );
+      instance.SetNew(&new_vectorlETGTextEntrymUgR);
+      instance.SetNewArray(&newArray_vectorlETGTextEntrymUgR);
+      instance.SetDelete(&delete_vectorlETGTextEntrymUgR);
+      instance.SetDeleteArray(&deleteArray_vectorlETGTextEntrymUgR);
+      instance.SetDestructor(&destruct_vectorlETGTextEntrymUgR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<TGTextEntry*> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<TGTextEntry*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlETGTextEntrymUgR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<TGTextEntry*>*)0x0)->GetClass();
+      vectorlETGTextEntrymUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlETGTextEntrymUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlETGTextEntrymUgR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<TGTextEntry*> : new vector<TGTextEntry*>;
+   }
+   static void *newArray_vectorlETGTextEntrymUgR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<TGTextEntry*>[nElements] : new vector<TGTextEntry*>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlETGTextEntrymUgR(void *p) {
+      delete ((vector<TGTextEntry*>*)p);
+   }
+   static void deleteArray_vectorlETGTextEntrymUgR(void *p) {
+      delete [] ((vector<TGTextEntry*>*)p);
+   }
+   static void destruct_vectorlETGTextEntrymUgR(void *p) {
+      typedef vector<TGTextEntry*> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<TGTextEntry*>
+
+namespace ROOT {
+   static TClass *vectorlETGRadioButtonmUgR_Dictionary();
+   static void vectorlETGRadioButtonmUgR_TClassManip(TClass*);
+   static void *new_vectorlETGRadioButtonmUgR(void *p = 0);
+   static void *newArray_vectorlETGRadioButtonmUgR(Long_t size, void *p);
+   static void delete_vectorlETGRadioButtonmUgR(void *p);
+   static void deleteArray_vectorlETGRadioButtonmUgR(void *p);
+   static void destruct_vectorlETGRadioButtonmUgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<TGRadioButton*>*)
+   {
+      vector<TGRadioButton*> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<TGRadioButton*>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<TGRadioButton*>", -2, "vector", 216,
+                  typeid(vector<TGRadioButton*>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlETGRadioButtonmUgR_Dictionary, isa_proxy, 0,
+                  sizeof(vector<TGRadioButton*>) );
+      instance.SetNew(&new_vectorlETGRadioButtonmUgR);
+      instance.SetNewArray(&newArray_vectorlETGRadioButtonmUgR);
+      instance.SetDelete(&delete_vectorlETGRadioButtonmUgR);
+      instance.SetDeleteArray(&deleteArray_vectorlETGRadioButtonmUgR);
+      instance.SetDestructor(&destruct_vectorlETGRadioButtonmUgR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<TGRadioButton*> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<TGRadioButton*>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlETGRadioButtonmUgR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<TGRadioButton*>*)0x0)->GetClass();
+      vectorlETGRadioButtonmUgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlETGRadioButtonmUgR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlETGRadioButtonmUgR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<TGRadioButton*> : new vector<TGRadioButton*>;
+   }
+   static void *newArray_vectorlETGRadioButtonmUgR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<TGRadioButton*>[nElements] : new vector<TGRadioButton*>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlETGRadioButtonmUgR(void *p) {
+      delete ((vector<TGRadioButton*>*)p);
+   }
+   static void deleteArray_vectorlETGRadioButtonmUgR(void *p) {
+      delete [] ((vector<TGRadioButton*>*)p);
+   }
+   static void destruct_vectorlETGRadioButtonmUgR(void *p) {
+      typedef vector<TGRadioButton*> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<TGRadioButton*>
+
+namespace ROOT {
+   static TClass *multimaplEintcOintgR_Dictionary();
+   static void multimaplEintcOintgR_TClassManip(TClass*);
+   static void *new_multimaplEintcOintgR(void *p = 0);
+   static void *newArray_multimaplEintcOintgR(Long_t size, void *p);
+   static void delete_multimaplEintcOintgR(void *p);
+   static void deleteArray_multimaplEintcOintgR(void *p);
+   static void destruct_multimaplEintcOintgR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const multimap<int,int>*)
+   {
+      multimap<int,int> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(multimap<int,int>));
+      static ::ROOT::TGenericClassInfo 
+         instance("multimap<int,int>", -2, "map", 98,
+                  typeid(multimap<int,int>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &multimaplEintcOintgR_Dictionary, isa_proxy, 0,
+                  sizeof(multimap<int,int>) );
+      instance.SetNew(&new_multimaplEintcOintgR);
+      instance.SetNewArray(&newArray_multimaplEintcOintgR);
+      instance.SetDelete(&delete_multimaplEintcOintgR);
+      instance.SetDeleteArray(&deleteArray_multimaplEintcOintgR);
+      instance.SetDestructor(&destruct_multimaplEintcOintgR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::MapInsert< multimap<int,int> >()));
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const multimap<int,int>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *multimaplEintcOintgR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const multimap<int,int>*)0x0)->GetClass();
+      multimaplEintcOintgR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void multimaplEintcOintgR

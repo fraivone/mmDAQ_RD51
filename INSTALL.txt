@@ -1,0 +1,74 @@
+
+INSTALL file for the browser project
+
+
+Change log, in antichronological order:
+24/04/2012 initial commit - browse raw files, show Q fit results
+
+
+
+I. PREREQUISITES
+
+1. Boost.org libraries from http://www.boost.org/ (maybe preinstalled on SLC)
+   tested version 1.49 (the latest)
+2. ROOT installed, in path and libraries-related environment variables set up
+
+
+II. INSTALLATION
+
+1. Check out from svn+ssh://username@svn.cern.ch/reps/mamma/eventbrowser/trunk
+
+2. set up
+
+2.1. for compilation
+   a) check and correct these paths in the Makefile
+      BOOSTLD=/opt/boost/stage/lib
+      BOOSTINC=-I/opt/boost
+   b) root must be set up beforehand (in path + libraries)
+      ex. source thisroot.sh
+
+2.2. for running
+   a) uses shared libraries , environment variables may need to be set up
+   LD_LIBRARY_PATH=$LD_LIBRARY_PATH:path-to-boost-lib:path-to-root-lib
+   DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:path-to-boost-lib:path-to-root-lib
+   replace path-to-boost-lib and path-to-root-lib by your paths
+   source LD_LIBRARY_PATH
+   source DYLD_LIBRARY_PATH
+
+3. Run make
+
+
+
+III. USAGE
+
+Usage: run 'browser' and open file from gui 
+(to be updated)
+
+
+--------------------------------------------------------------------------------
+   Here part of RD51 installation log, on 32bit SLC 4.8, by Eraldo Oliveri:
+   --- start of citation ---
+   We download boost_1_49_0.tar.gz from http://www.boost.org/
+   (for installation http://www.boost.org/doc/libs/1_49_0/doc/html/bbv2/installation.html)
+
+	> tar -xzf boost_1_49_0.tar.gz
+	> cd boost_1_49_0
+	> ./bootstrap.sh
+	> ./bjam install
+
+	Without prefix the default installation was in /usr/local
+	We changed the Makefile replacing:
+		BOOSTLD=/opt/boost/stage/lib
+		BOOSTINC=-I/opt/boost
+	with:
+		BOOSTLD=/usr/local/lib
+		BOOSTINC=-I/usr/local
+      
+	We add to our .bashrc the following lines:
+		export PATH=$PATH:/usr/local;
+		export ROOTSYS=$ROOTSYS:/usr/local/bin;
+		export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:/usr/local/lib/root;
+   --- end of citation ---
+   To be tested but adding /usr/local paths may not be necessary (MB)
+--------------------------------------------------------------------------------
+

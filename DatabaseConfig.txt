@@ -1,0 +1,12 @@
+#IP
+137.138.179.76
+#Database name
+MMdatabase
+#Username
+root
+#Password
+m3gasmu
+#config table
+MMConfig
+#run table 
+MMROOTRun
