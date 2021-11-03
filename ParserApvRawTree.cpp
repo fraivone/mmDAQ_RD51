@@ -49,6 +49,7 @@ m_rawtree(rawtree), m_env(0), m_detector(det), m_gui(gui)
       m_rawtree->GetEntry(ii);
       parse_entry(m_detector);
       progress(double(ii)/double(n_entries));
+         
    }
 //   m_detector->print();
    //make a Tenv out of the detector

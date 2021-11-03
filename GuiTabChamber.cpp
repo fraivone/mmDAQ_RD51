@@ -9,6 +9,7 @@
 #include "GuiTabChamber.h"
 #include "EventBrowser.h"
 #include "GuiTabChamberEvent1D.h"  
+#include "GuiTabChamberEvent2D.h"  
 #include "GuiTabChamberStats.h"  
 #include "GuiMainFrame.h"
 
@@ -49,6 +50,7 @@ void CGuiTabChamber::do_construct_tab()
       // m_right_tabs.push_back(new CGuiTabDetectorEvent1D(this, m_config, m_eb, m_gui_right_tab, "Event1D"));
       // m_right_tabs.push_back(new CGuiTabReadoutStats(this, m_config, m_eb, m_gui_right_tab, "Statistics"));
       m_right_tabs.push_back(new CGuiTabChamberEvent1D(this, m_config, m_eb, m_gui_right_tab, "Event 1D")); 
+      m_right_tabs.push_back(new CGuiTabChamberEvent2D(this, m_config, m_eb, m_gui_right_tab, "RecHit 2D")); 
       m_right_tabs.push_back(new CGuiTabChamberStats(this, m_config, m_eb, m_gui_right_tab, "Statistics")); 
       
       //tabs - finish up

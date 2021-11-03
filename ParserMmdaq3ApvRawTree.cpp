@@ -45,11 +45,11 @@ m_rawtree(rawtree), m_env(0), m_detector(det), m_gui(gui)
    }
    
    n_entries = m_rawtree->GetEntries();
-//   std::cout << "CParserMmdaq3ApvRawTree n_entries=" << n_entries << std::endl;
+  std::cout << "CParserMmdaq3ApvRawTree n_entries=" << n_entries << std::endl;
    for (size_t ii = 0; ii < n_entries; ++ii) {
       m_rawtree->GetEntry(ii);
       parse_entry(m_detector);
-
+      
       progress(double(ii)/double(n_entries));
    }
 //   m_detector->print();
@@ -169,6 +169,7 @@ void CParserMmdaq3ApvRawTree::parse_entry(CDetDetector* detector)
                                                         25.0));
       
       readout->add_strip_to_stats(strip_ptr.get());
+      readout->add_strip_to_event(strip_ptr.get());
 //      xtalk_map[channelid.chip_id()].push_back(strip_ptr);
       if (ii==0) {
          readout->add_entry_to_stats(m_rawtree->m_time_s, m_rawtree->m_time_us);
@@ -177,10 +178,31 @@ void CParserMmdaq3ApvRawTree::parse_entry(CDetDetector* detector)
    }//for strips
    
    //xtalk in detector
+   bool is_tmm2_x = false;
+   bool is_tmm2_y = false;
+   bool is_tmm5_x = false;
+   bool is_tmm5_y = false;
 //   detector->add_xtalk_map(xtalk_map);
-   
    MakeElementsUnique(allreadouts);
+   for (auto const& rd : allreadouts) {
+       std::string name = rd->get_full_name();
+       
+       if (name == "H4 Tower-Tmm2-0-0-Y") is_tmm2_y = true;
+       if (name == "H4 Tower-Tmm2-0-0-X") is_tmm2_x = true;
+       if (name == "H4 Tower-Tmm5-0-0-Y") is_tmm5_y = true;
+       if (name == "H4 Tower-Tmm5-0-0-X") is_tmm5_x = true;
+       rd->add_RecHit_to_beamProfile();
+}
+   for (auto const& rd : allreadouts) {
+      if(rd->get_full_name().find("H4 Tower-Tmm2-0-0")!=std::string::npos){
+      if (is_tmm2_y==false or is_tmm2_x==false) rd->remove_last_RecHit_from_beamProfile();}
+
+      if(rd->get_full_name().find("H4 Tower-Tmm5-0-0")!=std::string::npos){
+      if (is_tmm5_y==false or is_tmm5_x==false) rd->remove_last_RecHit_from_beamProfile();}
+}  
+   
    std::for_each(allreadouts.begin(), allreadouts.end(), boost::bind(&CDetReadoutBase::reset_event_stats, _1));
+
 }
 
 void CParserMmdaq3ApvRawTree::progress(double val)

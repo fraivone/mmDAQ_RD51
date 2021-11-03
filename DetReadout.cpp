@@ -173,7 +173,6 @@ void CDetReadoutBase::add_loaded_event_to_stats()
       CDetStrip* strip = dynamic_cast<CDetStrip*>(ptr.get());
       add_strip_to_stats(strip);
    }
-   
    reset_event_stats();
 }
 
@@ -232,6 +231,68 @@ void CDetReadoutBase::add_strip_to_stats(CDetStrip* strip /*size_t strip_number,
 //      std::cout << "CDetReadoutBase::add_strip_to_stats bad time ceil from " << strip_time << std::endl;
 //   }
 //   std::cout << "ceil: " << (int)(std::ceil(strip_time)) << " <- " << strip_time << std::endl;
+}
+
+
+
+void CDetReadoutBase::add_strip_to_event(CDetStrip* strip) 
+{
+     if (!strip) {
+      std::cout << "null strip\n"; 
+      return;
+   }
+    
+   size_t strip_number = strip->get_number();
+   m_event_strips.push_back(strip_number);
+ 
+}
+
+double CDetReadoutBase::add_RecHit_to_beamProfile() 
+{  
+   int last_strip = -1;
+   bool consecutive_strips = true;
+   int strip_sum = 0;
+   int number_of_strips = 0;
+   double strip_center = -1.;
+   std::sort(m_event_strips.rbegin(), m_event_strips.rend());
+
+   // Check if strips are consecutive ==> they are a single RecHit
+   BOOST_FOREACH(int strip_number, m_event_strips) {
+      number_of_strips +=1;
+      // if(get_full_name().find("H4 Tower-Tmm2-0-0")!=std::string::npos)  std::cout<<get_full_name()<<"Strip "<<strip_number<<"\t Number of strips "<<number_of_strips<<std::endl;
+      if (last_strip != -1){
+         if(abs(strip_number - last_strip) <= 2) {
+            last_strip = strip_number;
+            strip_sum += strip_number;
+            
+         }
+         else{ consecutive_strips = false; }
+      }
+      else {
+         last_strip = strip_number;
+         strip_sum += strip_number;
+      }
+   }
+   
+   // Evaluating center of the cluster in case of a single rechit
+   if(last_strip != -1)
+   {
+      if(consecutive_strips) 
+      {
+         strip_center = strip_sum/(double)number_of_strips;
+         // std::cout<<"Strips are consecutive on "<<get_full_name()<<". Center found on strip "<< strip_center <<std::endl;
+         }
+      // else std::cout<<"Strips are NOT consecutive"<<std::endl;
+      }
+   // else std::cout<<"No strips found in "<<get_full_name()<<std::endl;
+   
+   m_beamprofile_hitmap.push_back(strip_center);
+   m_event_strips.clear();
+}
+
+void CDetReadoutBase::remove_last_RecHit_from_beamProfile()
+{
+   m_beamprofile_hitmap.pop_back();
 }
 
 
@@ -441,6 +502,11 @@ const CDetReadoutBase::EventLongData& CDetReadoutBase::get_long_data() const
 const std::map<size_t, int>& CDetReadoutBase::get_stats_hitmap() const
 {
    return m_stats_hitmap;
+}
+std::vector<double> CDetReadoutBase::get_beamprofile_hitmap() const
+{
+   std::vector<double> beamprofile_hitmap = m_beamprofile_hitmap;
+   return beamprofile_hitmap;
 }
 
 const TH1F* CDetReadoutBase::get_stats_qmax_hist() const

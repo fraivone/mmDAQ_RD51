@@ -143,6 +143,7 @@ void CEventBrowserOnline::do_set_current_entry(size_t entry)
          m_detector->load_event_data(m_event_strips, m_overlay_strips);
          m_detector->set_event_raw_udp_data(m_shm_reader.get_event_udp_raw_data());
          m_detector->add_loaded_event_to_stats();
+         // std::cout<<"I am using event online"<<std::cout;
          m_new_event_data = false;
          m_detector->unlock();
       }

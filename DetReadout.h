@@ -77,6 +77,9 @@ namespace browser {
       
 //      void add_strip_number(size_t number);
       void add_strip_to_stats(CDetStrip* strip);
+      double add_RecHit_to_beamProfile();
+      void remove_last_RecHit_from_beamProfile();
+      void add_strip_to_event(CDetStrip* strip);
 
 //      void add_strip_to_stats(size_t strip_number, const std::vector<short>& qvec);
       void add_entry_to_stats(long time_s, int time_us);
@@ -101,7 +104,7 @@ namespace browser {
       const EventShortData& get_short_data() const;
       const EventLongData&  get_long_data() const;
       const std::map<size_t, int>& get_stats_hitmap() const;
-
+      std::vector<double> get_beamprofile_hitmap() const;
       const std::map<size_t, int>& get_stats_nstrips() const;
       const TH1F* get_stats_qmax_hist() const;
       const TH1F* get_stats_maxqmax_hist() const;
@@ -138,6 +141,8 @@ namespace browser {
       EventShortData          m_event_short_data;
       EventLongData           m_event_long_data;
       std::map<size_t, int>   m_stats_hitmap; ///< strip number and number of hits
+      std::vector<double>      m_beamprofile_hitmap; ///< position of rechit for each evt
+      std::vector<int>        m_event_strips; ///< strip number in the event
 //      std::map<int, int>      m_stats_qmax; ///< int qvalue  and number of hits
 //      std::map<int, int>      m_stats_maxqmax; ///< int qvalue  and number of hits
       boost::shared_ptr<TH1F> m_stats_qmax;  /// stats for the float time distribution, try with rebinning of hist

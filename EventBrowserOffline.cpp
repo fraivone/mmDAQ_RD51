@@ -95,13 +95,11 @@ void CEventBrowserOffline::do_load_event_data()
    m_overlay_strips.clear();
    m_pedestal_strips.clear();
    
-   //   std::cout << "CEventBrowser::load_event_data() a size=" << m_event_strips.size() << std::endl;
    m_detector->clear_event_data();
    //from root file
    m_event_strips = m_reader.load_event_data_raw(m_detector.get());
    m_overlay_strips = m_reader.load_event_data_overlay(m_detector.get());
     m_pedestal_strips = m_reader.load_event_data_pedestal(m_detector.get());
-    std::cout << "CEventBrowser::load_event_data() b size=" << m_event_strips.size() << std::endl;
    m_detector->load_event_data(m_event_strips, m_overlay_strips);
    m_detector->load_pedestal_data(m_pedestal_strips);
 }
